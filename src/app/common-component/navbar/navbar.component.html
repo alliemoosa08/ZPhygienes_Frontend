@@ -1,5 +1,20 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
+        <button mat-icon-button>
+            <img class="logo" src="assets/images/exotica_logo.png" >
+        </button>
+        <span class="example-spacer"></span>
+        <span class="menu-spacer"></span>
+        <div class="center-list">
+          <a mat-button [routerLink]="'/accounts'"> Home </a>
+          <a mat-button [routerLink]="'/create-account'"> Our Service </a>
+          <a mat-button [routerLink]="'/contacts'"> About Us </a>
+        </div>
+
+        <span class="example-spacer"></span>
+        <div>
+            <a mat-button [routerLink]="'/accounts'"> Login </a>
+        </div>
 
     </mat-toolbar-row>
 </mat-toolbar>
