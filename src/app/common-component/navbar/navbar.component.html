@@ -1,19 +1,31 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button mat-icon-button>
-            <img class="logo" src="assets/images/exotica_logo.png" >
-        </button>
+        <span class="logo">
+            <img src="assets/images/exotica_logo.png" class="navbarImg" (click)="home()">
+        </span>
+
         <span class="example-spacer"></span>
         <span class="menu-spacer"></span>
         <div class="center-list">
-          <a mat-button [routerLink]="'/accounts'"> Home </a>
-          <a mat-button [routerLink]="'/create-account'"> Our Service </a>
-          <a mat-button [routerLink]="'/contacts'"> About Us </a>
+            <button mat-button (click)="home()">
+                <span >Home</span> 
+            </button>
+            <button mat-button> 
+                <span >Our Services</span> 
+            </button>
+            <button mat-button> 
+                <span >About us</span> 
+            </button>
+            <button mat-button> 
+                <span >Contact us</span> 
+            </button>
         </div>
 
         <span class="example-spacer"></span>
         <div>
-            <a mat-button [routerLink]="'/accounts'"> Login </a>
+            <button mat-button> 
+                <span >Sign in</span> 
+            </button>
         </div>
 
     </mat-toolbar-row>

@@ -11,14 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { NavbarComponent } from './common-component/navbar/navbar.component';
-import { FooterComponent } from './common-component/footer/footer.component';
 import { HomeComponent } from './common-component/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
     HomeComponent
   ],
   imports: [
