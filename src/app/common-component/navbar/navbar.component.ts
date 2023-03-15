@@ -14,8 +14,18 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  home(){
+  home() {
     this.router.navigate(["/home"])
+  }
+
+  ourServices() {
+    this.router.navigate(["/our-services"])
+  }
+  aboutUs() {
+    this.router.navigate(["/about-us"])
+  }
+  contactUs() {
+    this.router.navigate(["/contact-us"])
   }
 
 }

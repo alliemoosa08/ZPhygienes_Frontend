@@ -9,15 +9,20 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import { HomeComponent } from './home/home.component'
 import { NavbarComponent } from './common-component/navbar/navbar.component';
-import { HomeComponent } from './common-component/home/home.component';
+import { OurServiceComponent } from './our-service/our-service.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    OurServiceComponent,
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
