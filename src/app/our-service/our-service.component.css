@@ -1,0 +1,43 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.service-card {
+  max-width: 20%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 20px;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  background-color:aliceblue;
+}
+
+.card {
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 200px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
+
+.card-title {
+  align-items: center;
+}
+
+img{
+ height: 91%;
+}
