@@ -10,28 +10,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 20px 20px;
-  padding: 20px;
+  margin: 0 20px 25px;
+  padding: 25px;
   transition: all 0.2s ease-in-out;
   line-height: 24px;
   background-color:aliceblue;
-}
-
-.card {
-  all: unset;
-  border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #fafafa;
-  height: 40px;
-  width: 200px;
-  margin: 0 8px 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  line-height: 24px;
+  cursor: pointer;
 }
 
 .card-title {
@@ -40,4 +24,13 @@
 
 img{
  height: 91%;
+}
+
+.header{
+  text-align: center;
+}
+
+.sub-header{
+  text-align: center;
+  margin-top: -1%;
 }
