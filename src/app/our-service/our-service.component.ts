@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-our-service',
@@ -7,27 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurServiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   goToCoucheService(){
-  console.log("couche service works")
+    this.router.navigate(["our-services/couches-chairs"])
   }
   goToRugService(){
-    console.log("Rug service works")
+    this.router.navigate(["our-services/rug-carpets"])
   }
   goToSneakerService(){
-    console.log("Sneaker service works")
+    this.router.navigate(["our-services/sneakers"])
   }
   goToCarIntService(){
-    console.log("Car service works")
+    this.router.navigate(["our-services/car-interior"])
   }
   goToOfficeService(){
-    console.log("Office service works")
+    this.router.navigate(["our-services/office"])
   }
   goToHomeService(){
-    console.log("Home service works")
+    this.router.navigate(["our-services/home"])
   }
 }

@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
+import { MatIconModule } from '@angular/material/icon'
 
 
 import { HomeComponent } from './home/home.component'
@@ -14,6 +15,12 @@ import { NavbarComponent } from './common-component/navbar/navbar.component';
 import { OurServiceComponent } from './our-service/our-service.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CoucheChairsComponent } from './our-service/couche-chairs/couche-chairs.component';
+import { RugCarpetComponent } from './our-service/rug-carpet/rug-carpet.component';
+import { SneakerComponent } from './our-service/sneaker/sneaker.component';
+import { CarInteriorComponent } from './our-service/car-interior/car-interior.component';
+import { OfficeComponent } from './our-service/office/office.component';
+import { HomeCleaningComponent } from './our-service/home-cleaning/home-cleaning.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HomeComponent,
     OurServiceComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CoucheChairsComponent,
+    RugCarpetComponent,
+    SneakerComponent,
+    CarInteriorComponent,
+    OfficeComponent,
+    HomeCleaningComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +44,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MatButtonModule,
     MatDividerModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
 
   ],
   providers: [],
