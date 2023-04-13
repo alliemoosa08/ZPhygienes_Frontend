@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { MatIconModule } from '@angular/material/icon'
+import { MatListModule } from '@angular/material/list'
 
 
 import { HomeComponent } from './home/home.component'
@@ -45,7 +46,8 @@ import { HomeCleaningComponent } from './our-service/home-cleaning/home-cleaning
     MatDividerModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
 
   ],
   providers: [],
