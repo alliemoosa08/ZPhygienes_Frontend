@@ -1,0 +1,22 @@
+.header {
+    text-align: center;
+}
+
+.items {
+    max-width: 50%;
+    margin-bottom: 4%;
+}
+
+.itme-icon {
+    max-width: 30%;
+    max-height: 20%;
+    margin-left: 0.2%;
+}
+
+.add-img {
+    max-width: 7%;
+    max-height: 7%;
+    float: right;
+    margin-right: 2%;
+    cursor: pointer;
+}

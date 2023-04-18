@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoucheChairsComponent } from './couche-chairs.component';
+import { CouchChairsComponent } from './couch-chairs.component';
 
-describe('CoucheChairsComponent', () => {
-  let component: CoucheChairsComponent;
-  let fixture: ComponentFixture<CoucheChairsComponent>;
+describe('CouchChairsComponent', () => {
+  let component: CouchChairsComponent;
+  let fixture: ComponentFixture<CouchChairsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoucheChairsComponent ]
+      declarations: [ CouchChairsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CoucheChairsComponent);
+    fixture = TestBed.createComponent(CouchChairsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

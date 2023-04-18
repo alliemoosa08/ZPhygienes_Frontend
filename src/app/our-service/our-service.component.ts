@@ -13,7 +13,7 @@ export class OurServiceComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToCoucheService(){
+  goToCouchService(){
     this.router.navigate(["our-services/couches-chairs"])
   }
   goToRugService(){

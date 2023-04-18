@@ -16,7 +16,7 @@ import { NavbarComponent } from './common-component/navbar/navbar.component';
 import { OurServiceComponent } from './our-service/our-service.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { CoucheChairsComponent } from './our-service/couche-chairs/couche-chairs.component';
+import { CouchChairsComponent } from './our-service/couche-chairs/couch-chairs.component';
 import { RugCarpetComponent } from './our-service/rug-carpet/rug-carpet.component';
 import { SneakerComponent } from './our-service/sneaker/sneaker.component';
 import { CarInteriorComponent } from './our-service/car-interior/car-interior.component';
@@ -31,7 +31,7 @@ import { HomeCleaningComponent } from './our-service/home-cleaning/home-cleaning
     OurServiceComponent,
     AboutUsComponent,
     ContactUsComponent,
-    CoucheChairsComponent,
+    CouchChairsComponent,
     RugCarpetComponent,
     SneakerComponent,
     CarInteriorComponent,

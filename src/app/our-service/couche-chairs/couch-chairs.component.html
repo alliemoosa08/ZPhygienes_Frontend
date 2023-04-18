@@ -1,0 +1,13 @@
+<h1 class="header">Couches and Chairs Service</h1>
+<br>
+<mat-card class="items" *ngFor="let item of couchOrChairItems">
+  <mat-card-header>
+    <mat-card-title>{{item.Title}}</mat-card-title>
+    <mat-card-subtitle>{{item.Price}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <img class="add-img" (click)="addItem()" src="/assets/images/addIcon.png" alt="Add Image">
+  </mat-card-actions>
+  <img class="itme-icon" mat-card-image src="/assets/images/couche-chair-services/{{item.Image}}" alt="{{item.Title}}">
+</mat-card>
+<br>
