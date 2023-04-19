@@ -12,27 +12,32 @@ export class CouchChairsComponent implements OnInit {
     {
       Title: "5 Seater Couch",
       Price: "R550.00",
-      Image: "couch_5_seater.jpg"
+      Image: "couch_5_seater.jpg",
+      IsSelected: true
     },
     {
       Title: "4 Seater Couch",
       Price: "R500.00",
-      Image: "couch_4_seater.jpg"
+      Image: "couch_4_seater.jpg",
+      IsSelected: false
     },
     {
       Title: "3 Seater Couch",
       Price: "R450.00",
-      Image: "couch_3_seater.jpg"
+      Image: "couch_3_seater.jpg",
+      IsSelected: true
     },
     {
       Title: "2 Seater Couch",
       Price: "R400.00",
-      Image: "couch_2_seater.jpg"
+      Image: "couch_2_seater.jpg",
+      IsSelected: false
     },
     {
-      Title: "Office Chair",
+      Title: "Chair",
       Price: "R150.00",
-      Image: "office_chair.jpg"
+      Image: "office_chair.jpg",
+      IsSelected: true
     }
   ]
 

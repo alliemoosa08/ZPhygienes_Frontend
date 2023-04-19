@@ -23,7 +23,7 @@
 }
 
 img{
- height: 91%;
+max-height: 91%;
 }
 
 .header{

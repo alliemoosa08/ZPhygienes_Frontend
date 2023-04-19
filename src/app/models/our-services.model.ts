@@ -1,5 +1,6 @@
-export class CouchesAndChairs{
+export class CouchesAndChairs {
     Title!: string;
     Price!: string;
     Image!: string;
+    IsSelected!: boolean;
 }
