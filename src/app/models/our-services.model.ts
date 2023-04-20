@@ -4,3 +4,10 @@ export class CouchesAndChairs {
     Image!: string;
     IsSelected!: boolean;
 }
+
+export class RugsAndCarpets {
+    Title!: string;
+    Price!: string;
+    Image!: string;
+    IsSelected!: boolean;
+}

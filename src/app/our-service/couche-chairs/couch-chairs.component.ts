@@ -38,6 +38,12 @@ export class CouchChairsComponent implements OnInit {
       Price: "R150.00",
       Image: "office_chair.jpg",
       IsSelected: true
+    },
+    {
+      Title: "Sheru chair",
+      Price: "R100.00",
+      Image: "sheru_chair.jpg",
+      IsSelected: true
     }
   ]
 
