@@ -4,34 +4,29 @@
             <img src="assets/images/exotica_logo.png" class="navbarImg" (click)="home()">
         </span>
 
-        <span class="example-spacer"></span>
+        <span class="class-spacer"></span>
         <span class="menu-spacer"></span>
         <div class="center-list">
             <button mat-button (click)="home()">
-                <span >Home</span> 
+                <span>Home</span>
             </button>
-            <button mat-button (click)="ourServices()"> 
-                <span >Our Services</span> 
+            <button mat-button (click)="ourServices()">
+                <span>Our Services</span>
             </button>
-            <button mat-button (click)="aboutUs()"> 
-                <span >About us</span> 
+            <button mat-button (click)="aboutUs()">
+                <span>About us</span>
             </button>
-            <button mat-button (click)="contactUs()"> 
-                <span >Contact us</span> 
-            </button>
-        </div>
-
-        <span class="example-spacer"></span>
-        <div>
-            <button mat-button> 
-                <mat-icon>share</mat-icon>
-            </button>
-        </div>
-        <div>
-            <button mat-button> 
-                <mat-icon>facebook</mat-icon>
+            <button mat-button (click)="contactUs()">
+                <span>Contact us</span>
             </button>
         </div>
 
+        <span class="class-spacer"></span>
+        <div>
+            <button mat-button>
+                <span matBadge="0" matBadgeOverlap="false" matBadgeColor="warn">Book Now</span>
+            </button>
+        </div>
+        <span style="flex: 0.05 0 auto;"></span>
     </mat-toolbar-row>
 </mat-toolbar>
