@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Sneaker } from 'src/app/models/our-services.model';
+import { OurServicesService } from 'src/app/services/our-services.service';
 @Component({
   selector: 'app-sneaker',
   templateUrl: './sneaker.component.html',
@@ -7,36 +7,19 @@ import { Sneaker } from 'src/app/models/our-services.model';
 })
 export class SneakerComponent implements OnInit {
 
-  sneakers: Sneaker[] =[
-    {
-      Title: "Dark Color Sneaker",
-      Price: "R120.00",
-      Image: "dark_black_sneaker.jpg",
-      IsSelected: true
-    },
-    {
-      Title: "Mixed Colors Sneaker",
-      Price: "R130.00",
-      Image: "mixed_sneaker.jpg",
-      IsSelected: true
-    },
-    {
-      Title: "Red White and Black Colors Sneaker",
-      Price: "R140.00",
-      Image: "red_white_black_sneaker.jpg",
-      IsSelected: false
-    },
-    {
-      Title: "White Sneaker",
-      Price: "R150.00",
-      Image: "white_sneaker.webp",
-      IsSelected: true
-    }
-  ]
+ items!: any;
 
-  constructor() { }
+  constructor(private ourServices: OurServicesService) { }
 
   ngOnInit(): void {
+    this.ourServices.geServiceByServiceType(3).subscribe({
+      next: data => {
+        this.items = data
+        console.log(this.items);
+      }, error: error => {
+        console.log(error);
+      }
+    });
   }
 
   addItem() {

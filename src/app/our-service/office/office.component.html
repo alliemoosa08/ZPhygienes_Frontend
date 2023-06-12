@@ -2,12 +2,12 @@
 <br>
 
 <div class="card-container">
-    <mat-card class="items" *ngFor="let item of officeServices">
+    <mat-card class="items" *ngFor="let item of items">
       <mat-card-header>
-        <mat-card-title>{{item.Title}}</mat-card-title>
-        <mat-card-subtitle><b>{{item.Price}}</b></mat-card-subtitle>
+        <mat-card-title>{{item.title}}</mat-card-title>
+        <mat-card-subtitle><b>{{item.price}}</b></mat-card-subtitle>
       </mat-card-header>
-      <img class="item-icon" mat-card-image src="/assets/images/office-services/{{item.Image}}" alt="{{item.Title}}">
+      <img class="item-icon" mat-card-image src="/assets/images/office-services/{{item.image}}" alt="{{item.title}}">
       <mat-card-actions>
         <button mat-raised-button color="success">Add to Booking</button>
       </mat-card-actions>

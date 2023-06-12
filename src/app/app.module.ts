@@ -10,7 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
 import { MatBadgeModule } from '@angular/material/badge'
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './home/home.component'
 import { NavbarComponent } from './common-component/navbar/navbar.component';
@@ -23,6 +23,7 @@ import { SneakerComponent } from './our-service/sneaker/sneaker.component';
 import { CarInteriorComponent } from './our-service/car-interior/car-interior.component';
 import { OfficeComponent } from './our-service/office/office.component';
 import { HomeCleaningComponent } from './our-service/home-cleaning/home-cleaning.component';
+import { OurServicesService } from './services/our-services.service';
 
 @NgModule({
   declarations: [
@@ -49,10 +50,13 @@ import { HomeCleaningComponent } from './our-service/home-cleaning/home-cleaning
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatBadgeModule
+    MatBadgeModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+    OurServicesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

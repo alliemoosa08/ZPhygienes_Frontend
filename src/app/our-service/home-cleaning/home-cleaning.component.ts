@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeCleaning } from 'src/app/models/our-services.model';
+import { OurServicesService } from 'src/app/services/our-services.service';
 
 @Component({
   selector: 'app-home-cleaning',
@@ -8,35 +8,21 @@ import { HomeCleaning } from 'src/app/models/our-services.model';
 })
 export class HomeCleaningComponent implements OnInit {
 
-  homeCleaningServices: HomeCleaning[] = [
-    {
-      Title: "Bath Room",
-      Price: "R70.00",
-      Image: "bathroom.png",
-      IsSelected: true
-    },
-    {
-      Title: "Windows",
-      Price: "R80.00",
-      Image: "windows.jpg",
-      IsSelected: true
-    },
-    {
-      Title: "Laundry Per kg",
-      Price: "R75.00",
-      Image: "Laundry.jpg",
-      IsSelected: true
-    },
-    {
-      Title: "Full House",
-      Price: "R400.00",
-      Image: "full_house.jpg",
-      IsSelected: true
-    }
-  ]
-  constructor() { }
+  items!: any;
+
+  constructor(private ourServices: OurServicesService) { }
 
   ngOnInit(): void {
+     // interval(3000).subscribe(() => {
+      this.ourServices.geServiceByServiceType(6).subscribe({
+        next: data => {
+          this.items = data
+          console.log(this.items);
+        }, error: error => {
+          console.log(error);
+        }
+      });
+    // });
   }
 
   addItem() {
