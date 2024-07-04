@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
-
-
+import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component'
 import { NavbarComponent } from './common-component/navbar/navbar.component';
 import { OurServiceComponent } from './our-service/our-service.component';
@@ -27,7 +26,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDividerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
 
   ],
   providers: [],
