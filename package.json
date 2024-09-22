@@ -1,5 +1,5 @@
 {
-  "name": "exotica-frontend",
+  "name": "zphygienes",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "^17.3.9",
     "@angular/animations": "^17.3.11",
     "@angular/cdk": "^17.3.10",
     "@angular/common": "^17.3.11",
@@ -20,14 +21,14 @@
     "@angular/platform-browser": "^17.3.11",
     "@angular/platform-browser-dynamic": "^17.3.11",
     "@angular/router": "^17.3.11",
-    "angular-material": "^1.2.5",
+    "angular-material": "^1.1.24",
+    "bootstrap": "^5.3.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.7"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.8",
-    "@angular/cli": "~17.3.8",
+    "@angular/cli": "^17.3.9",
     "@angular/compiler-cli": "^17.3.11",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.1.0",

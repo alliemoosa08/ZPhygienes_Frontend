@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,10 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  showToggler: boolean = false;
+
 
   constructor(
     private router: Router
-  ) { }
+  ) { 
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.showToggler = window.innerWidth < 426; // Show toggler on mobile screens
+  }
 
   ngOnInit(): void {
   }
@@ -26,6 +39,10 @@ export class NavbarComponent implements OnInit {
   }
   contactUs() {
     this.router.navigate(["/contact-us"])
+  }
+
+  signIn() {
+    this.router.navigate(["/sign-in"])
   }
 
 }
