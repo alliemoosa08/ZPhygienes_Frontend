@@ -1,34 +1,58 @@
 <nav class="navbar">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Brand</a>
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="home()">ZPhygienes</a>
 
-        <div class="spacer" *ngIf="showToggler"></div>
+    <div class="spacer" *ngIf="showToggler"></div>
 
-        <button class="navbar-toggler" *ngIf="showToggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <button (click)="isMenuOpen()" *ngIf="showToggler" mat-button class="menu-button">
+      <mat-icon>{{ menuOpened ? 'menu_open' : 'menu' }}</mat-icon>
+    </button>
 
-        <div *ngIf="!showToggler" class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav">
-                <button mat-raised-button (click)="home()" class="nav-link">
-                    <span>Home</span>
-                </button>
-                <button mat-raised-button (click)="ourServices()" class="nav-link">
-                    <span>Our Services</span>
-                </button>
-                <button mat-raised-button (click)="aboutUs()" class="nav-link">
-                    <span>About Us</span>
-                </button>
-                <button mat-raised-button (click)="contactUs()" class="nav-link">
-                    <span>Contact Us</span>
-                </button>
-            </div>
-            <div>
-                <button mat-raised-button (click)="signIn()">
-                    <span>Sign In</span>
-                </button>
-            </div>
-        </div>
+    <!-- Burger menu content when toggled -->
+    <div *ngIf="menuOpened && showToggler" class="burger-menu">
+      <button mat-raised-button (click)="home()" class="nav-link">
+        <span>Home</span>
+      </button>
+      <button mat-raised-button (click)="ourServices()" class="nav-link">
+        <span>Our Services</span>
+      </button>
+      <button mat-raised-button (click)="aboutUs()" class="nav-link">
+        <span>About Us</span>
+      </button>
+      <button mat-raised-button (click)="contactUs()" class="nav-link">
+        <span>Contact Us</span>
+      </button>
+      <button mat-raised-button (click)="signIn()" class="nav-link">
+        <span>Sign In</span>
+      </button>
     </div>
+
+    <div *ngIf="!showToggler" class="spacer"></div>
+
+    <div *ngIf="!showToggler" class="nav-toggle">
+      <div class="navbar-nav">
+        <button mat-raised-button (click)="home()" class="nav-link">
+          <span>Home</span>
+        </button>
+        <button mat-raised-button (click)="ourServices()" class="nav-link">
+          <span>Our Services</span>
+        </button>
+        <button mat-raised-button (click)="aboutUs()" class="nav-link">
+          <span>About us</span>
+        </button>
+        <button mat-raised-button (click)="contactUs()" class="nav-link">
+          <span>Contact us</span>
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="!showToggler" class="spacer"></div>
+
+    <div *ngIf="!showToggler" style="display: flex; align-items: center;">
+      <button class="signInBtn" (click)="signIn()">
+        <span>Sign In</span>
+      </button>
+    </div>
+  </div>
+
 </nav>

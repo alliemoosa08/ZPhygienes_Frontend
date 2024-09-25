@@ -1,17 +1,71 @@
-.center-list {
-    margin: 0 auto;
-}
-
 .spacer {
     flex: 1 1 auto;
 }
 
-.logo {
-   padding-left: 2%;
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
 }
 
-.navbarImg{
-   height: 45px;
-   width: 125%;
-   cursor: pointer;
+.menu-button {
+    line-height: normal;
+    border: none;
+    background-color: #54B4D3;
+    cursor: pointer;
+    color: white;
+    mat-icon {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+    }
 }
+
+.signInBtn{
+   background-color: #72A0C1;
+   border: none;
+   color: #FFFFFF;
+   border-radius: 5px;
+   font-size: 1.1rem;
+   cursor: pointer;
+   width: 85px;
+   height: 29px;
+}
+
+
+.burger-menu {
+    position: absolute;  
+    top: 60px;           
+    right: 0;           
+    background-color: white;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 4px;  
+    z-index: 1000;      
+    display: flex;      
+    flex-direction: column; 
+    padding: 10px 15px;  
+    width: 200px;       
+  }
+  
+  .burger-menu .nav-link {
+    margin: 5px 0;     
+    width: 100%;        
+    text-align: left;   
+  }
+  
+  .burger-menu .nav-link:hover {
+    background-color: #f0f0f0; 
+    border-radius: 4px; 
+  }
+  
+  .burger-menu .nav-link:focus {
+    outline: none;      
+  }
+
+
+
+
+
+
+
+
+
