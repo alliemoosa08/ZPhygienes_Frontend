@@ -7,48 +7,18 @@
 
 <br>
 
-<div class="card-container">
-  <mat-card class="service-card" (click)="goToCoucheService()">
-    <mat-card-header>
-      <mat-card-title class="card-title">Couche/Chairs Cleaning</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="/assets/images/couche_service.jpg" alt="Couche service">
-  </mat-card>
-
-  <mat-card class="service-card" (click)=" goToRugService()">
-    <mat-card-header>
-      <mat-card-title class="card-title">Rug/Carpet Cleaning</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="/assets/images/rug_service.jpg" alt="rug service">
-  </mat-card>
-
-  <mat-card class="service-card" (click)="goToSneakerService()">
-    <mat-card-header>
-      <mat-card-title class="card-title">Sneaker Cleaning</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="/assets/images/sneaker_service.webp" alt="sneaker service">
-  </mat-card>
-
-  <mat-card class="service-card" (click)="goToCarIntService()">
-    <mat-card-header>
-      <mat-card-title class="card-title">Car Interior Cleaning</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="/assets/images/car_interior_service.jpg" alt="car interior service">
-  </mat-card>
-
-  <mat-card class="service-card" (click)="goToOfficeService()">
-    <mat-card-header>
-      <mat-card-title class="card-title">Office Cleaning</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="/assets/images/office_service.jpg" alt="office service">
-  </mat-card>
-
-  <mat-card class="service-card" (click)="goToHomeService()">
-    <mat-card-header>
-      <mat-card-title class="card-title">Home Cleaning</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="/assets/images/home_service.jpg" alt="Home service">
-  </mat-card>
-
+<div class="content">
+  <div *ngFor="let service of services">
+    <mat-card (click)="service.function()">
+      <mat-card-header>
+        <mat-card-title>{{service.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="service.image" alt="Couch service">
+      <mat-card-content>
+        <p>{{service.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
+
 <br>

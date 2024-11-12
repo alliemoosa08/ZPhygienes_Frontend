@@ -30,30 +30,35 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logo(){
+    this.menuOpened = false;
+    this.router.navigate(["/home"])
+  }
+
   home() {
-    this.menuOpened = !this.menuOpened
+    this.menuOpened = !this.menuOpened;
     this.router.navigate(["/home"])
   }
 
   ourServices() {
-    this.menuOpened = !this.menuOpened
+    this.menuOpened = !this.menuOpened;
     this.router.navigate(["/our-services"])
   }
   aboutUs() {
-    this.menuOpened = !this.menuOpened
+    this.menuOpened = !this.menuOpened;
     this.router.navigate(["/about-us"])
   }
   contactUs() {
-    this.menuOpened = !this.menuOpened
+    this.menuOpened = !this.menuOpened;
     this.router.navigate(["/contact-us"])
   }
 
   signIn() {
-    this.menuOpened = !this.menuOpened
+    this.menuOpened = !this.menuOpened;
     this.router.navigate(["/sign-in"])
   }
 
   isMenuOpen() {
-   this.menuOpened = !this.menuOpened
+   this.menuOpened = !this.menuOpened;
   }
 }

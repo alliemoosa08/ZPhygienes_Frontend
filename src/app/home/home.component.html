@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="carousel">
+  <div class="item" *ngFor="let item of this.items; let i = index" [class.active]="currentSlideIndex == i">
+    <img [src]="item.image" alt="Carousel Image">
+    <button (click)="prevSlide()">
+      <mat-icon class="controlArrows">chevron_left</mat-icon>
+    </button>
+    <button (click)="nextSlide()">
+      <mat-icon class="controlArrows">chevron_right</mat-icon>
+    </button>
+  </div>
+</div>
+
+

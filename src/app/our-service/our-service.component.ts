@@ -7,27 +7,75 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurServiceComponent implements OnInit {
 
+  services: any[] = [
+    {
+      title: 'Couch Cleaning',
+      function: () => this.goToCouchService(),
+      image: '/assets/services/couch/couch_service.jpg',
+      description: 'View list of couch service'
+    },
+    {
+      title: 'Chair Cleaning',
+      function: () => this.goToChairService(),
+      image: '/assets/services/couch/couch_service.jpg',
+      description: 'View list of couch service'
+    },
+    {
+      title: 'Rugs Cleaning',
+      function: () => this.goToRugsService(),
+      image: '/assets/services/couch/couch_service.jpg',
+      description: 'View list of couch service'
+    },
+    {
+      title: 'Mattress Cleaning',
+      function: () => this.goToMattressService(),
+      image: '/assets/services/couch/couch_service.jpg',
+      description: 'View list of couch service'
+    },
+    {
+      title: 'Office Cleaning',
+      function: () => this.goToOfficeService(),
+      image: '/assets/services/couch/couch_service.jpg',
+      description: 'View list of couch service'
+    },
+    {
+      title: 'Home Cleaning',
+      function: () => this.goToHomeService(),
+      image: '/assets/services/couch/couch_service.jpg',
+      description: 'View list of couch service'
+    },
+    {
+      title: 'Car Seat Cleaning',
+      function: () => this.goToCarSeatService(),
+      image: '/assets/services/couch/couch_service.jpg',
+      description: 'View list of couch service'
+    },
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  goToCoucheService(){
-  console.log("couche service works")
+  goToCouchService(){
+  console.log("couch service works")
   }
-  goToRugService(){
-    console.log("Rug service works")
+  goToChairService(){
+    console.log("chair service works")
   }
-  goToSneakerService(){
-    console.log("Sneaker service works")
+  goToRugsService(){
+    console.log("Rugs service works")
   }
-  goToCarIntService(){
-    console.log("Car service works")
+  goToMattressService(){
+    console.log("Mattress service works")
   }
   goToOfficeService(){
     console.log("Office service works")
   }
   goToHomeService(){
     console.log("Home service works")
+  }
+  goToCarSeatService(){
+    console.log("Car Seat service works")
   }
 }
