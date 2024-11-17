@@ -7,13 +7,13 @@
 
 <br>
 
-<div class="content">
+<div class="ourServicesClass">
   <div *ngFor="let service of services">
     <mat-card (click)="service.function()">
       <mat-card-header>
         <mat-card-title>{{service.title}}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image [src]="service.image" alt="Couch service">
+      <img class="ourServicesImg" mat-card-image [src]="service.image" [alt]="service.title + 'image'">
       <mat-card-content>
         <p style="margin-top: 5px;">{{service.description}}</p>
       </mat-card-content>

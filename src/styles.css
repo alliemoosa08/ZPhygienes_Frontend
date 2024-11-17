@@ -132,22 +132,49 @@ body {
     width: 90%;
     align-items: center;
     margin: auto;
-    background-color: yellow;
-
     div {
       flex: 1 1 300px;
       /* Allows cards to take a width of at least 300px */
-      min-width: 250px;
+      min-width: 90%;
       /* Minimum width for each card */
-      max-width: 300px;
+      max-width: 100%;
       /* Maximum width for each card */
-    }
 
-    mat-card {
-      height: auto;
-      /* Allows the height of the card to adapt to its content */
-      display: flex;
-      flex-direction: column;
+      margin-bottom: 10%;
+    }
+  
+    img{
+      width: 100%;
+      height: 230px;
+    }
+  }
+
+  .ourServicesClass {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards into rows */
+    justify-content: center; /* Aligns cards to center */
+    gap: 5%; /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+  
+  
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 90%;
+      /* Minimum width for each card */
+      max-width: 100%;
+      /* Maximum width for each card */
+
+      margin-bottom: 10%;
+    }
+  
+    img{
+      width: 100%;
+      height: 230px;
     }
   }
 
@@ -226,22 +253,50 @@ body {
     width: 90%;
     align-items: center;
     margin: auto;
-    background-color: yellow;
 
     div {
       flex: 1 1 300px;
       /* Allows cards to take a width of at least 300px */
-      min-width: 250px;
+      min-width: 90%;
       /* Minimum width for each card */
-      max-width: 300px;
+      max-width: 100%;
       /* Maximum width for each card */
-    }
 
-    mat-card {
-      height: auto;
-      /* Allows the height of the card to adapt to its content */
-      display: flex;
-      flex-direction: column;
+      margin-bottom: 8%;
+    }
+  
+    img{
+      width: 100%;
+      height: 250px;
+    }
+  }
+
+  .ourServicesClass {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards into rows */
+    justify-content: center; /* Aligns cards to center */
+    gap: 5%; /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+  
+  
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 90%;
+      /* Minimum width for each card */
+      max-width: 100%;
+      /* Maximum width for each card */
+
+      margin-bottom: 8%;
+    }
+  
+    img{
+      width: 100%;
+      height: 250px;
     }
   }
 }
@@ -312,30 +367,59 @@ body {
     /* Wraps the cards into rows */
     justify-content: center;
     /* Aligns cards to center */
-    gap: 20px;
+    gap: 5%;
     /* Space between cards */
     padding: 16px;
     width: 90%;
     align-items: center;
     margin: auto;
-    background-color: yellow;
 
     div {
       flex: 1 1 300px;
       /* Allows cards to take a width of at least 300px */
-      min-width: 250px;
+      min-width: 85%;
       /* Minimum width for each card */
-      max-width: 300px;
+      max-width: 95%;
       /* Maximum width for each card */
-    }
 
-    mat-card {
-      height: auto;
-      /* Allows the height of the card to adapt to its content */
-      display: flex;
-      flex-direction: column;
+      margin-bottom: 8%;
+    }
+  
+    img{
+      width: 100%;
+      height: 270px;
     }
   }
+
+  .ourServicesClass {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards into rows */
+    justify-content: center; /* Aligns cards to center */
+    gap: 5%; /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+  
+  
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 85%;
+      /* Minimum width for each card */
+      max-width: 95%;
+      /* Maximum width for each card */
+
+      margin-bottom: 8%;
+    }
+  
+    img{
+      width: 100%;
+      height: 270px;
+    }
+  }
+
 }
 
 /* Tablet screens (min-width: 426px) and (max-width: 768px) */
@@ -417,28 +501,54 @@ body {
     /* Wraps the cards into rows */
     justify-content: center;
     /* Aligns cards to center */
-    gap: 20px;
+    gap:30px;
     /* Space between cards */
     padding: 16px;
     width: 90%;
     align-items: center;
     margin: auto;
-    background-color: yellow;
 
     div {
       flex: 1 1 300px;
       /* Allows cards to take a width of at least 300px */
-      min-width: 250px;
+      min-width: 200px;
       /* Minimum width for each card */
       max-width: 300px;
       /* Maximum width for each card */
+      margin-bottom: 8px;
     }
+  
+    img{
+      width: 100%;
+      height: 190px;
+    }
+  }
 
-    mat-card {
-      height: auto;
-      /* Allows the height of the card to adapt to its content */
-      display: flex;
-      flex-direction: column;
+  .ourServicesClass {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards into rows */
+    justify-content: center; /* Aligns cards to center */
+    gap: 30px; /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+  
+  
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 200px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
+      margin-bottom: 8px;
+    }
+  
+    img{
+      width: 100%;
+      height: 190px;
     }
   }
 
@@ -523,28 +633,54 @@ body {
     /* Wraps the cards into rows */
     justify-content: center;
     /* Aligns cards to center */
-    gap: 20px;
+    gap: 40px;
     /* Space between cards */
     padding: 16px;
     width: 90%;
     align-items: center;
     margin: auto;
-    background-color: yellow;
 
     div {
       flex: 1 1 300px;
       /* Allows cards to take a width of at least 300px */
-      min-width: 250px;
+      min-width: 160px;
       /* Minimum width for each card */
-      max-width: 300px;
+      max-width: 260px;
       /* Maximum width for each card */
+      margin-bottom: 10px;
     }
+  
+    img{
+      width: 100%;
+      height: 225px;
+    }
+  }
 
-    mat-card {
-      height: auto;
-      /* Allows the height of the card to adapt to its content */
-      display: flex;
-      flex-direction: column;
+  .ourServicesClass {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards into rows */
+    justify-content: center; /* Aligns cards to center */
+    gap: 40px; /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+  
+  
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 160px;
+      /* Minimum width for each card */
+      max-width: 260px;
+      /* Maximum width for each card */
+      margin-bottom: 10px;
+    }
+  
+    img{
+      width: 100%;
+      height: 225px;
     }
   }
 }
@@ -628,28 +764,54 @@ body {
     /* Wraps the cards into rows */
     justify-content: center;
     /* Aligns cards to center */
-    gap: 20px;
+    gap: 40px;
     /* Space between cards */
     padding: 16px;
     width: 90%;
     align-items: center;
     margin: auto;
-    background-color: yellow;
 
     div {
       flex: 1 1 300px;
       /* Allows cards to take a width of at least 300px */
-      min-width: 250px;
+      min-width: 320px;
       /* Minimum width for each card */
-      max-width: 300px;
+      max-width: 420px;
       /* Maximum width for each card */
+      margin-bottom: 10px;
     }
+  
+    img{
+      width: 100%;
+      height: 300px;
+    }
+  }
 
-    mat-card {
-      height: auto;
-      /* Allows the height of the card to adapt to its content */
-      display: flex;
-      flex-direction: column;
+  .ourServicesClass {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards into rows */
+    justify-content: center; /* Aligns cards to center */
+    gap: 40px; /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+  
+  
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 320px;
+      /* Minimum width for each card */
+      max-width: 420px;
+      /* Maximum width for each card */
+      margin-bottom: 10px;
+    }
+  
+    img{
+      width: 100%;
+      height: 300px;
     }
   }
 }
@@ -733,28 +895,54 @@ body {
     /* Wraps the cards into rows */
     justify-content: center;
     /* Aligns cards to center */
-    gap: 20px;
+    gap: 40px;
     /* Space between cards */
     padding: 16px;
     width: 90%;
     align-items: center;
     margin: auto;
-    background-color: yellow;
 
     div {
       flex: 1 1 300px;
       /* Allows cards to take a width of at least 300px */
-      min-width: 250px;
+      min-width: 420px;
       /* Minimum width for each card */
-      max-width: 300px;
+      max-width: 520px;
       /* Maximum width for each card */
+      margin-bottom: 20px;
     }
 
-    mat-card {
-      height: auto;
-      /* Allows the height of the card to adapt to its content */
-      display: flex;
-      flex-direction: column;
+    img{
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  .ourServicesClass {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the cards into rows */
+    justify-content: center; /* Aligns cards to center */
+    gap: 40px; /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+  
+  
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 420px;
+      /* Minimum width for each card */
+      max-width: 520px;
+      /* Maximum width for each card */
+      margin-bottom: 20px;
+    }
+  
+    img{
+      width: 100%;
+      height: 300px;
     }
   }
 }

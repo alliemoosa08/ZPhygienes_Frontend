@@ -1,24 +1,20 @@
 <h1 class="header">Couch Services</h1>
 
 <div class="service_card">
-    <div >
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-            <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-        </mat-card-actions>
-    </mat-card>
-</div>
+    <div *ngFor="let couchService of couchServices">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{couchService.title}}</mat-card-title>
+                <mat-card-subtitle>{{couchService.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="couchService.image" [alt]="couchService.title + 'image'">
+            <mat-card-content>
+                <p>{{couchService.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToWishlist(couchService.id)" mat-button>Add To wishlist</button>
+                <button (click)="addToBooking(couchService.id)" mat-button>Add To Booking</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>

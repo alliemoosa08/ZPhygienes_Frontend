@@ -11,33 +11,12 @@
   margin-top: 5px;
 }
 
-.content {
+mat-card {
+  height: auto; /* Allows the height of the card to adapt to its content */
   display: flex;
-  flex-wrap: wrap; /* Wraps the cards into rows */
-  justify-content: center; /* Aligns cards to center */
-  gap: 30px; /* Space between cards */
-  padding: 16px;
-  width: 90%;
-  align-items: center;
-  margin: auto;
-  cursor: pointer;
+  flex-direction: column;
+  background-color: #D9DDDC;
 
-
-  div {
-    flex: 1 1 305px; /* Allows cards to take a width of at least 300px */
-    min-width: 255px; /* Minimum width for each card */
-    max-width: 305px; /* Maximum width for each card */
-  }
-  
-  mat-card {
-    height: auto; /* Allows the height of the card to adapt to its content */
-    display: flex;
-    flex-direction: column;
-    background-color: #D9DDDC;
-  }
-
-  img{
-    width: 100%;
-    height: 210px;
-  }
 }
+
+
