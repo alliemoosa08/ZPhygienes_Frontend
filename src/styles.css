@@ -1,576 +1,770 @@
 /* Global styles for phone, tablet, and laptop/desktop */
 
 .navbar {
-    background-color: #000;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
 
 .navbar-brand:hover {
-    color: #00308F;
-    font-weight: bold;
+  color: #00308F;
+  font-weight: bold;
 }
 
 .navbar-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Hover effect for nav links */
 .navbar-nav .nav-link:hover {
-    color: #00308F;
-    font-weight: bold;
+  color: #00308F;
+  font-weight: bold;
 }
 
 /* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
 }
 
 .logo {
-    height: 75px;
-    width: 75px;
+  height: 75px;
+  width: 75px;
 }
 
 .burger-menu {
-    .nav-link {
-        margin: 0 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #ffffff;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-    }
+  .nav-link {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+  }
 }
 
 
 /* Mobile Small (max-width: 320px) */
 @media (max-width: 320px) {
-    .home-logo {
-        width: 100%;
-        height: 20vh;
+  .carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
-        img {
-            width: 100%;
-            height: 37vh;
-            opacity: 1;
-        }
+  .carousel .item {
+    z-index: 1;
+    opacity: 0.6;
+    position: absolute;
+    transform: scale(0.3);
+    transition: all 0.3s ease-in;
+
+    &.active {
+      position: relative;
+      transform: scale(1);
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .carousel img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .carousel button:first-child {
+    left: 0;
+  }
+
+  .carousel button:last-child {
+    right: 0;
+  }
+
+  .service_card {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps the cards into rows */
+    justify-content: center;
+    /* Aligns cards to center */
+    gap: 20px;
+    /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    background-color: yellow;
+
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 250px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
     }
 
-    .carousel {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-      }
-      .carousel .item{
-        z-index: 1;
-        opacity: 0.6;
-        position: absolute;
-        transform: scale(0.3);
-        transition: all 0.3s ease-in;
-        &.active{
-          position: relative;
-          transform: scale(1);
-          width: 90%;
-          margin: 0 auto;
-          z-index: 10;
-          opacity: 1;
-        }
-      }
-      
-      .carousel img {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-      }
-      
-      .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-      }
-      
-      .carousel button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-      }
-      
-      .carousel button:first-child {
-        left: 0;
-      }
-      
-      .carousel button:last-child {
-        right: 0;
-      }
+    mat-card {
+      height: auto;
+      /* Allows the height of the card to adapt to its content */
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
 }
 
 /* Mobile Medium (min-width: 321px) and (max-width: 375px) */
 @media (min-width: 321px) and (max-width: 375px) {
-    .carousel {
-        width: 100%;
-        height: 60%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-top: 2%;
-      }
-      .carousel .item{
-        z-index: 1;
-        opacity: 0.6;
-        position: absolute;
-        transform: scale(0.3);
-        transition: all 0.3s ease-in;
-        &.active{
-          position: relative;
-          transform: scale(1);
-          width: 90%;
-          margin: 0 auto;
-          z-index: 10;
-          opacity: 1;
-        }
-      }
-      
-      .carousel img {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-      }
-      
-      .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-      }
-      
-      .carousel button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-      }
-      
-      .carousel button:first-child {
-        left: 0;
-      }
-      
-      .carousel button:last-child {
-        right: 0;
-      }
+  .carousel {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .carousel .item {
+    z-index: 1;
+    opacity: 0.6;
+    position: absolute;
+    transform: scale(0.3);
+    transition: all 0.3s ease-in;
+
+    &.active {
+      position: relative;
+      transform: scale(1);
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .carousel img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .carousel button:first-child {
+    left: 0;
+  }
+
+  .carousel button:last-child {
+    right: 0;
+  }
+
+  /* service cards */
+  .service_card {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps the cards into rows */
+    justify-content: center;
+    /* Aligns cards to center */
+    gap: 20px;
+    /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    background-color: yellow;
+
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 250px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
+    }
+
+    mat-card {
+      height: auto;
+      /* Allows the height of the card to adapt to its content */
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 /* Mobile Large (min-width: 376px) and (max-width: 425px) */
 @media (min-width: 376px) and (max-width: 425px) {
-    .carousel {
-        width: 100%;
-        height: 60%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-top: 2%;
-      }
-      .carousel .item{
-        z-index: 1;
-        opacity: 0.6;
-        position: absolute;
-        transform: scale(0.3);
-        transition: all 0.3s ease-in;
-        &.active{
-          position: relative;
-          transform: scale(1);
-          width: 90%;
-          margin: 0 auto;
-          z-index: 10;
-          opacity: 1;
-        }
-      }
-      
-      .carousel img {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-      }
-      
-      .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-      }
-      
-      .carousel button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-      }
-      
-      .carousel button:first-child {
-        left: 0;
-      }
-      
-      .carousel button:last-child {
-        right: 0;
-      }
+  .carousel {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .carousel .item {
+    z-index: 1;
+    opacity: 0.6;
+    position: absolute;
+    transform: scale(0.3);
+    transition: all 0.3s ease-in;
+
+    &.active {
+      position: relative;
+      transform: scale(1);
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .carousel img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .carousel button:first-child {
+    left: 0;
+  }
+
+  .carousel button:last-child {
+    right: 0;
+  }
+
+  .service_card {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps the cards into rows */
+    justify-content: center;
+    /* Aligns cards to center */
+    gap: 20px;
+    /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    background-color: yellow;
+
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 250px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
+    }
+
+    mat-card {
+      height: auto;
+      /* Allows the height of the card to adapt to its content */
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 /* Tablet screens (min-width: 426px) and (max-width: 768px) */
 @media (min-width: 426px) and (max-width: 768px) {
-    .nav-toggle {
-        display: flex;
-        flex-direction: row;
+  .nav-toggle {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .carousel .item {
+    z-index: 1;
+    opacity: 0.6;
+    position: absolute;
+    transform: scale(0.3);
+    transition: all 0.3s ease-in;
+
+    &.active {
+      position: relative;
+      transform: scale(1);
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .carousel img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .carousel button:first-child {
+    left: 0;
+  }
+
+  .carousel button:last-child {
+    right: 0;
+  }
+
+  /* Service cards */
+  .service_card {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps the cards into rows */
+    justify-content: center;
+    /* Aligns cards to center */
+    gap: 20px;
+    /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    background-color: yellow;
+
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 250px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
     }
 
-    .navbar-nav .nav-link {
-        margin: 0 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #ffffff;
+    mat-card {
+      height: auto;
+      /* Allows the height of the card to adapt to its content */
+      display: flex;
+      flex-direction: column;
     }
-
-    .carousel {
-        width: 100%;
-        height: 60%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-top: 2%;
-      }
-      .carousel .item{
-        z-index: 1;
-        opacity: 0.6;
-        position: absolute;
-        transform: scale(0.3);
-        transition: all 0.3s ease-in;
-        &.active{
-          position: relative;
-          transform: scale(1);
-          width: 90%;
-          margin: 0 auto;
-          z-index: 10;
-          opacity: 1;
-        }
-      }
-      
-      .carousel img {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-      }
-      
-      .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-      }
-      
-      .carousel button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-      }
-      
-      .carousel button:first-child {
-        left: 0;
-      }
-      
-      .carousel button:last-child {
-        right: 0;
-      }
+  }
 
 }
 
 /* Laptop screens (min-width: 769px) and (max-width: 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .nav-toggle {
-        display: flex;
-        flex-direction: row;
+  .nav-toggle {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .carousel .item {
+    z-index: 1;
+    opacity: 0.6;
+    position: absolute;
+    transform: scale(0.3);
+    transition: all 0.3s ease-in;
+
+    &.active {
+      position: relative;
+      transform: scale(1);
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .carousel img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .carousel button:first-child {
+    left: 0;
+  }
+
+  .carousel button:last-child {
+    right: 0;
+  }
+
+  /* Service cards */
+  .service_card {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps the cards into rows */
+    justify-content: center;
+    /* Aligns cards to center */
+    gap: 20px;
+    /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    background-color: yellow;
+
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 250px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
     }
 
-    .navbar-nav .nav-link {
-        margin: 0 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #ffffff;
+    mat-card {
+      height: auto;
+      /* Allows the height of the card to adapt to its content */
+      display: flex;
+      flex-direction: column;
     }
-
-    .home-logo {
-        width: 100%;
-        height: 20vh;
-
-        img {
-            width: 100%;
-            height: 37vh;
-            opacity: 1;
-        }
-    }
-
-    .carousel {
-        width: 100%;
-        height: 60%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-top: 2%;
-      }
-      .carousel .item{
-        z-index: 1;
-        opacity: 0.6;
-        position: absolute;
-        transform: scale(0.3);
-        transition: all 0.3s ease-in;
-        &.active{
-          position: relative;
-          transform: scale(1);
-          width: 90%;
-          margin: 0 auto;
-          z-index: 10;
-          opacity: 1;
-        }
-      }
-      
-      .carousel img {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-      }
-      
-      .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-      }
-      
-      .carousel button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-      }
-      
-      .carousel button:first-child {
-        left: 0;
-      }
-      
-      .carousel button:last-child {
-        right: 0;
-      }
+  }
 }
 
 /*Large Laptop screens (min-width: 1025px) and (max-width: 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .nav-toggle {
-        display: flex;
-        flex-direction: row;
+  .nav-toggle {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .carousel .item {
+    z-index: 1;
+    opacity: 0.6;
+    position: absolute;
+    transform: scale(0.3);
+    transition: all 0.3s ease-in;
+
+    &.active {
+      position: relative;
+      transform: scale(1);
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .carousel img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .carousel button:first-child {
+    left: 0;
+  }
+
+  .carousel button:last-child {
+    right: 0;
+  }
+
+  /* Service cards */
+  .service_card {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps the cards into rows */
+    justify-content: center;
+    /* Aligns cards to center */
+    gap: 20px;
+    /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    background-color: yellow;
+
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 250px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
     }
 
-    .navbar-nav .nav-link {
-        margin: 0 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #ffffff;
+    mat-card {
+      height: auto;
+      /* Allows the height of the card to adapt to its content */
+      display: flex;
+      flex-direction: column;
     }
-
-    .home-logo {
-        width: 100%;
-        height: 20vh;
-
-        img {
-            width: 100%;
-            height: 37vh;
-            opacity: 1;
-        }
-    }
-    .carousel {
-        width: 100%;
-        height: 60%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-top: 2%;
-      }
-      .carousel .item{
-        z-index: 1;
-        opacity: 0.6;
-        position: absolute;
-        transform: scale(0.3);
-        transition: all 0.3s ease-in;
-        &.active{
-          position: relative;
-          transform: scale(1);
-          width: 90%;
-          margin: 0 auto;
-          z-index: 10;
-          opacity: 1;
-        }
-      }
-      
-      .carousel img {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-      }
-      
-      .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-      }
-      
-      .carousel button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-      }
-      
-      .carousel button:first-child {
-        left: 0;
-      }
-      
-      .carousel button:last-child {
-        right: 0;
-      }
+  }
 }
 
 /*Large screens (min-width: 1441px) */
 @media (min-width: 1441px) {
-    .nav-toggle {
-        display: flex;
-        flex-direction: row;
+  .nav-toggle {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .carousel .item {
+    z-index: 1;
+    opacity: 0.6;
+    position: absolute;
+    transform: scale(0.3);
+    transition: all 0.3s ease-in;
+
+    &.active {
+      position: relative;
+      transform: scale(1);
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  .carousel img {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  .carousel button:first-child {
+    left: 0;
+  }
+
+  .carousel button:last-child {
+    right: 0;
+  }
+
+  /* Service cards */
+  .service_card {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wraps the cards into rows */
+    justify-content: center;
+    /* Aligns cards to center */
+    gap: 20px;
+    /* Space between cards */
+    padding: 16px;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    background-color: yellow;
+
+    div {
+      flex: 1 1 300px;
+      /* Allows cards to take a width of at least 300px */
+      min-width: 250px;
+      /* Minimum width for each card */
+      max-width: 300px;
+      /* Maximum width for each card */
     }
 
-    .navbar-nav .nav-link {
-        margin: 0 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #ffffff;
+    mat-card {
+      height: auto;
+      /* Allows the height of the card to adapt to its content */
+      display: flex;
+      flex-direction: column;
     }
-
-    .home-logo {
-        width: 100%;
-        height: 80vh;
-
-        img {
-            width: 100%;
-            height: 80vh;
-            opacity: 1;
-        }
-    }
-
-    .carousel {
-        width: 100%;
-        height: 60%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-top: 2%;
-      }
-      .carousel .item{
-        z-index: 1;
-        opacity: 0.6;
-        position: absolute;
-        transform: scale(0.3);
-        transition: all 0.3s ease-in;
-        &.active{
-          position: relative;
-          transform: scale(1);
-          width: 90%;
-          margin: 0 auto;
-          z-index: 10;
-          opacity: 1;
-        }
-      }
-      
-      .carousel img {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-      }
-      
-      .carousel button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-      }
-      
-      .carousel button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-        color: white;
-      }
-      
-      .carousel button:first-child {
-        left: 0;
-      }
-      
-      .carousel button:last-child {
-        right: 0;
-      }
+  }
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

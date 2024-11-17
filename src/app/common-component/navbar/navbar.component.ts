@@ -19,7 +19,6 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    console.log(event)
     this.checkScreenSize();
   }
 

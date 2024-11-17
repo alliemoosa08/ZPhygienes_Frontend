@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-our-service',
@@ -17,65 +18,67 @@ export class OurServiceComponent implements OnInit {
     {
       title: 'Chair Cleaning',
       function: () => this.goToChairService(),
-      image: '/assets/services/couch/couch_service.jpg',
+      image: '/assets/services/chair/chair_service.jpg',
       description: 'View list of couch service'
     },
     {
       title: 'Rugs Cleaning',
       function: () => this.goToRugsService(),
-      image: '/assets/services/couch/couch_service.jpg',
+      image: '/assets/services/rug/rug_service.jpg',
       description: 'View list of couch service'
     },
     {
       title: 'Mattress Cleaning',
       function: () => this.goToMattressService(),
-      image: '/assets/services/couch/couch_service.jpg',
+      image: '/assets/services/mattress/mattress_service.jpg',
       description: 'View list of couch service'
     },
     {
       title: 'Office Cleaning',
       function: () => this.goToOfficeService(),
-      image: '/assets/services/couch/couch_service.jpg',
+      image: '/assets/services/office/office_service.jpg',
       description: 'View list of couch service'
     },
     {
-      title: 'Home Cleaning',
+      title: 'House Cleaning',
       function: () => this.goToHomeService(),
-      image: '/assets/services/couch/couch_service.jpg',
+      image: '/assets/services/house/house_service.jpg',
       description: 'View list of couch service'
     },
     {
       title: 'Car Seat Cleaning',
       function: () => this.goToCarSeatService(),
-      image: '/assets/services/couch/couch_service.jpg',
+      image: '/assets/services/car_seat/car_seat_service.jpg',
       description: 'View list of couch service'
     },
   ]
 
-  constructor() { }
+  serviceRouter: string = "our-services";
+
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
 
   goToCouchService(){
-  console.log("couch service works")
+    this.router.navigate([this.serviceRouter+"/couch"])
   }
   goToChairService(){
-    console.log("chair service works")
+    this.router.navigate([this.serviceRouter+"/chair"])
   }
   goToRugsService(){
-    console.log("Rugs service works")
+    this.router.navigate([this.serviceRouter+"/rugs"])
   }
   goToMattressService(){
-    console.log("Mattress service works")
+    this.router.navigate([this.serviceRouter+"/mattress"])
   }
   goToOfficeService(){
-    console.log("Office service works")
+    this.router.navigate([this.serviceRouter+"/office"])
   }
   goToHomeService(){
-    console.log("Home service works")
+    this.router.navigate([this.serviceRouter+"/house"])
   }
   goToCarSeatService(){
-    console.log("Car Seat service works")
+    this.router.navigate([this.serviceRouter+"/car-seat"])
   }
 }
