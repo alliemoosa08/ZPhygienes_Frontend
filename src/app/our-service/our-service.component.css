@@ -15,8 +15,11 @@
   display: flex;
   flex-wrap: wrap; /* Wraps the cards into rows */
   justify-content: center; /* Aligns cards to center */
-  gap: 16px; /* Space between cards */
+  gap: 20px; /* Space between cards */
   padding: 16px;
+  width: 90%;
+  align-items: center;
+  margin: auto;
 }
 
 .content > div {
