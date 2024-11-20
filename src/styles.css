@@ -61,6 +61,17 @@ body {
   }
 }
 
+mat-card.serviceMatCard{
+  height: auto;
+  /* Allows the height of the card to adapt to its content */
+  display: flex;
+  flex-direction: column;
+  background-color: #D9DDDC;
+}
+
+.serviceHeader {
+  text-align: center;
+}
 
 /* Mobile Small (max-width: 320px) */
 @media (max-width: 320px) {

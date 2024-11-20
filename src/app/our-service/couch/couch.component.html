@@ -1,13 +1,13 @@
-<h1 class="header">Couch Services</h1>
+<h1 class="serviceHeader">Couch Services</h1>
 
 <div class="service_card">
     <div *ngFor="let couchService of couchServices">
-        <mat-card>
+        <mat-card class="serviceMatCard">
             <mat-card-header>
                 <mat-card-title>{{couchService.title}}</mat-card-title>
                 <mat-card-subtitle>{{couchService.price}}</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image [src]="couchService.image" [alt]="couchService.title + 'image'">
+            <img mat-card-image [src]="couchService.image" [alt]="couchService.title + ' image'">
             <mat-card-content>
                 <p>{{couchService.description}}</p>
             </mat-card-content>

@@ -1,1 +1,20 @@
-<p>mattress works!</p>
+<h1 class="serviceHeader">Mattress Services</h1>
+
+<div class="service_card">
+    <div *ngFor="let mattressService of mattressServices">
+        <mat-card class="serviceMatCard">
+            <mat-card-header>
+                <mat-card-title>{{mattressService.title}}</mat-card-title>
+                <mat-card-subtitle>{{mattressService.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="mattressService.image" [alt]="mattressService.title + ' image'">
+            <mat-card-content>
+                <p>{{mattressService.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToWishlist(mattressService.id)" mat-button>Add To wishlist</button>
+                <button (click)="addToBooking(mattressService.id)" mat-button>Add To Booking</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

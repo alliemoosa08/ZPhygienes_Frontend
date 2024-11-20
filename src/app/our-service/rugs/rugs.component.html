@@ -1,1 +1,20 @@
-<p>rugs works!</p>
+<h1 class="serviceHeader">Rug Services</h1>
+
+<div class="service_card">
+    <div *ngFor="let rugService of rugServices">
+        <mat-card class="serviceMatCard">
+            <mat-card-header>
+                <mat-card-title>{{rugService.title}}</mat-card-title>
+                <mat-card-subtitle>{{rugService.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="rugService.image" [alt]="rugService.title + ' image'">
+            <mat-card-content>
+                <p>{{rugService.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToWishlist(rugService.id)" mat-button>Add To wishlist</button>
+                <button (click)="addToBooking(rugService.id)" mat-button>Add To Booking</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

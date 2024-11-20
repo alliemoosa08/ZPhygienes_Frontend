@@ -1,1 +1,20 @@
-<p>office works!</p>
+<h1 class="serviceHeader">Office Services</h1>
+
+<div class="service_card">
+    <div *ngFor="let officeService of officeServices">
+        <mat-card class="serviceMatCard">
+            <mat-card-header>
+                <mat-card-title>{{officeService.title}}</mat-card-title>
+                <mat-card-subtitle>{{officeService.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="officeService.image" [alt]="officeService.title + ' image'">
+            <mat-card-content>
+                <p>{{officeService.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToWishlist(officeService.id)" mat-button>Add To wishlist</button>
+                <button (click)="addToBooking(officeService.id)" mat-button>Add To Booking</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

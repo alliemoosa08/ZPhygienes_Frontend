@@ -1,1 +1,20 @@
-<p>chair works!</p>
+<h1 class="serviceHeader">Chair Services</h1>
+
+<div class="service_card">
+    <div *ngFor="let chairService of chairServices">
+        <mat-card class="serviceMatCard">
+            <mat-card-header>
+                <mat-card-title>{{chairService.title}}</mat-card-title>
+                <mat-card-subtitle>{{chairService.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="chairService.image" [alt]="chairService.title + ' image'">
+            <mat-card-content>
+                <p>{{chairService.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToWishlist(chairService.id)" mat-button>Add To wishlist</button>
+                <button (click)="addToBooking(chairService.id)" mat-button>Add To Booking</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

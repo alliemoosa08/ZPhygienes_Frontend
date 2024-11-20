@@ -1,1 +1,20 @@
-<p>car-seat works!</p>
+<h1 class="serviceHeader">Car Seat Services</h1>
+
+<div class="service_card">
+    <div *ngFor="let carSeatService of carSeatServices">
+        <mat-card class="serviceMatCard">
+            <mat-card-header>
+                <mat-card-title>{{carSeatService.title}}</mat-card-title>
+                <mat-card-subtitle>{{carSeatService.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="carSeatService.image" [alt]="carSeatService.title + ' image'">
+            <mat-card-content>
+                <p>{{carSeatService.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToWishlist(carSeatService.id)" mat-button>Add To wishlist</button>
+                <button (click)="addToBooking(carSeatService.id)" mat-button>Add To Booking</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

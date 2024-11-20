@@ -1,1 +1,20 @@
-<p>home works!</p>
+<h1 class="serviceHeader">House Services</h1>
+
+<div class="service_card">
+    <div *ngFor="let houseService of houseServices">
+        <mat-card class="serviceMatCard">
+            <mat-card-header>
+                <mat-card-title>{{houseService.title}}</mat-card-title>
+                <mat-card-subtitle>{{houseService.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="houseService.image" [alt]="houseService.title + ' image'">
+            <mat-card-content>
+                <p>{{houseService.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToWishlist(houseService.id)" mat-button>Add To wishlist</button>
+                <button (click)="addToBooking(houseService.id)" mat-button>Add To Booking</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
